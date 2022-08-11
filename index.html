@@ -1,11 +1,51 @@
 <!DOCTYPE html>
 
+<head>
+<meta name="viewport" content="width=device-width", initial-scale="1">
+
 <style>
-    @import url("css.css");
+    @import url("css/style.css");
 </style>
+<script src="js/RENAME.js" defer></script>
 
-<body>
-<h1>HELOO</h1>
+<title>index page</title>
+</head>
 
-<img src="rat.jpg">
+<body id="index_body">
+    <nav>
+        <div class="nav_top">
+            <a class="logo" href="index.html">
+                <img src="images/placeholder_logo.png">
+            </a>
+            <a class="hamburger">
+                <img src="images/hamburger.png">
+            </a>        
+        </div>
+        <div class="nav_bottom">
+           <a href="what_are_vinyl.html"> <img src="images/placeholder_vinyl.png">What are vinyl records?</a>
+            <a href="how_do_vinyls_work.html"> <img src="images/placeholder_vinyl.png">How do they work?</a>
+           <a href="simulator.html"> <img src="images/placeholder_vinyl.png">Record Player Simulator</a>
+
+            <button><img src="images/down.png"></button>
+        </div>
+      
+    </nav>
+   
+    <div>
+        <!-- Play button -->
+        <div id="play_button">
+            <p>Please select which 'song' to play</p>
+            <a href><img src="images/play-button-icon.png">Play</a> 
+        </div>
+        <!-- Select Page/ "Song" -->
+        <div id="index_page_select">
+            <a>What are vinyl records?</a> 
+            <a>How do they work?</a>
+            <a>Record Player Simulator</a>
+            <img src="images/turntable_arm.png" class="arm_rotate_default">
+        </div>
+        
+    </div>
+
 </body>
+

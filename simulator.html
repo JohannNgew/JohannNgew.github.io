@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<head>
+    <meta name="viewport" content="width=device-width", initial-scale="1">
+    
+    <style>
+        @import url("css/style.css");
+    </style>
+    <script src="js/RENAME.js" defer></script>
+
+    <title>Vinyl Simulator</title>
+</head>
+
+<body id="simulator_body">
+    <nav>
+        <div class="nav_top">
+            <a class="logo" href="index.html">
+                <img src="images/placeholder_logo.png">
+            </a>
+            <a class="hamburger">
+                <img src="images/hamburger.png">
+            </a>        
+        </div>
+        <div class="nav_bottom">
+            <!-- <anchor>HOME</anchor> -->
+           <a href="what_are_vinyl.html"> <img src="images/placeholder_vinyl.png">What are vinyl records?</a>
+            <a href="how_do_vinyls_work.html"> <img src="images/placeholder_vinyl.png">How do they work?</a>
+           <a href="simulator.html"> <img src="images/placeholder_vinyl.png">Record Player Simulator</a>
+
+            <button><img src="images/down.png"></button>
+        </div>
+      
+    </nav>
+    
+    <div>
+        <div>
+            <h1>Record Player Simulator</h1>
+            <p>Record players, also known as a turntable, are pretty cool. Wanna play around with one?</p>
+            <p>(Note: not all turntables have the same functionalities as this one. Some may have a fixed speed, or the arm may need to be manually lifted)</p>
+        </div>
+        <div>
+            <div id="simulation_section">
+            
+                <div>
+                    <img src="images/turntable_platter.png" id="platter">
+                    <img src="images/turntable_arm.png" id="arm">
+                </div>
+                <div>
+
+                    <div> 
+                    <button id="speed">SPEED</button>
+                    <p>White: 33RPM</p>
+                    <p>Gray: 45RPM</p>
+                    </div>
+                    <div>
+                        <img src="images/at_logo.png">
+                    </div>
+                    <div>
+                        <button id="start">START</button>
+                        <button id="stop">STOP</button>
+                        <button id="armButton">ARM</button>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll">
+                <button class="scrollButtonUp"><img src="images/down.png"></button>
+                <div>
+                    <div class="scrollItem scrollUp">
+                        <img src="images/album1.jpg" class="album" >
+                        <img src="images/placeholder_vinyl.png" class="record">
+                        <div>
+                            <p>Song: Hotel</p>
+                            <p>RPM: 33 1/3</p>
+                            <p>Size: 12"</p>
+                        </div>
+                        
+                    </div>
+                    <div  class="scrollItem scrollActive">
+                        <img src="images/album2.jpg" class="album">
+                        <img src="images/placeholder_vinyl.png" class="record">
+                        <div>
+                            <p>Song: Snow</p>
+                            <p>RPM: 33 1/3</p>
+                            <p>Size: 12"</p>
+                        </div>
+                    </div>
+                    <div class="scrollItem scrollDown">
+                        <img src="images/album3.jpg" class="album">
+                        <img src="images/placeholder_vinyl.png" class="record">
+                        <div>
+                            <p>Song: Medium</p>
+                            <p>RPM: 45</p>
+                            <p>Size: 12"</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="scrollButtonDown"><img src="images/down.png"></button>
+            </div>
+        </div>
+        <audio id="audio" src="audio/Hotel.mp3">
+            
+        </audio>
+    </div>
+</body>

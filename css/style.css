@@ -1,0 +1,1104 @@
+*{
+   font-family: 'Courier New', Courier, monospace;
+   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   scroll-behavior: smooth;
+}
+
+html{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    height:100%;
+    width: 100%;
+    margin: 0;
+    display: block;
+    flex-direction: column;
+    
+}
+
+div{
+   height: 100%;
+   
+}
+
+/* NAVIGATION BAR */
+
+.nav_hide{
+   transition: all 0.5s;
+
+   transform: translateY(-100%);
+   /* display: none; */
+}
+
+.nav_translate{
+   /* transform: translateY(-75%); */
+   transition: all 1s;
+
+   transform: translateY(-75%);
+
+}
+
+
+.nav_top_change_height{
+   height: 37.5%;
+}
+
+
+
+/* Desktop */
+nav{
+   height: 10%;
+   width: 100%;
+   /* border: solid 2px cyan; */
+   display: flex;
+   flex-direction: row;
+   position: fixed;
+   border: 1px solid black;
+   justify-content: flex-start;
+   transition: all 0.5s;
+   z-index: 2;
+}
+
+
+
+.nav_top{
+   background-color: white;
+   z-index: 2;
+   /* width: 20%; */
+   flex-basis: 10%;
+   width: 100%;
+   display: flex;
+   justify-content: flex-end;
+
+}
+
+.logo>img{
+   height: 100%;
+}
+
+
+
+.nav_bottom{
+   flex-basis: 90%;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   z-index: 1;
+   background-color: white;
+   transition: all 0.5s;
+
+}
+
+.nav_bottom > a{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   border: 2px solid black;
+   height: 100%;
+   flex-basis:30% ;
+
+   text-align: center;
+   font-size: 2vw;
+  
+
+   text-decoration: none;
+}
+
+
+.nav_bottom > a >img{
+   height: 50%;
+   margin-right: 2%;
+
+}
+
+a:visited{
+   color: inherit;
+   text-decoration: inherit;
+}
+
+.nav_bottom> a:hover:not(.active)
+{
+   background-color: gray;
+}
+
+.nav_bottom >button >img{
+   height: 1vh;
+}
+
+.nav_bottom>button{
+   height: 25%;
+   display: none;
+   width: 100%;
+}
+
+.offScreen{
+  transform: translateY(-100%);
+}
+
+.hamburger{
+   display: none;
+}
+
+.hamburger > img{
+   width: 100%;
+}
+
+.top_button{
+   background-color: red;
+   width: 0%; 
+   height: 0%; 
+   transform: translateY(60vh) translateX(5vw);
+   position: fixed;
+}
+.top_button >a > img{
+   width: 5vw;
+}
+
+/* tablet */
+@media screen and (max-width: 720px){
+   nav{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      align-content: center;
+      border: none;
+
+      height: 20%;
+   }  
+
+   nav > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      align-content: center;
+
+   }
+
+   .logo {
+      /* border: 2px solid red; */
+      width: 10%;
+   }
+
+   .logo > img{
+      width: 100%;
+      height: auto;
+      /* border: 2px solid chartreuse; */
+
+   }
+
+   .nav_bottom{
+      /* border: 2px solid chartreuse; */
+      height: auto;
+      flex-direction: column;
+      width: 100%;
+   }
+
+   .nav_top{
+      flex-direction: row;
+      justify-content: center;
+      align-items:  center;
+      height: 75%;
+      border-bottom: 3px solid black;
+   }
+
+   .nav_bottom > a{
+      font-size: 2.5vw;
+
+      text-align: center;
+      width: 100%;
+   }  
+
+   .nav_bottom > a > img{
+      height: 2vh;
+      margin-right: 1%;
+   }
+
+   .nav_bottom > button{
+      display: block;
+   }
+
+   .top_button{
+      transform: translateY(60vh) translateX(10vw);
+   }
+
+   .top_button >a > img{
+      width: 15vw;
+   }
+
+
+
+   /* .nav_bottom > a{} */
+
+   /* nav > div{
+      width: 100%;
+      border: 2px solid rgb(255, 0, 140);
+      align-items: center;
+      justify-content: center;
+      align-content: center;
+   }
+
+   nav>div>img{
+      width: 20%;
+      height: auto;
+      border: 2px solid green;
+
+   }
+
+   .nav_bottom{
+      display: flex;
+      flex-direction: column;
+   } */
+}
+
+/* Phone */
+@media screen and (max-width: 540px){
+   .hamburger{
+      width: 10%;
+      display: flex;
+      /* border: 5px solid yellow; */
+   }
+
+   .nav_top{
+      align-content:  center;
+
+      justify-content: space-between;
+   }
+
+   .nav_bottom > a{
+      font-size: 4vw;
+      text-align: left;
+      width: 100%;
+   }
+
+   .nav_bottom > button{
+      display: none;
+   }
+
+   .top_button{
+      transform: translateY(60vh) translateX(10vw);
+   }
+}  
+
+/* table of contents */
+   .table_of_contents{
+      border: 1px solid black;
+      margin-bottom: 15%;
+      padding: 2%;
+      width: 50%;
+   }
+
+   .table_of_contents > h1{
+      font-size: 4.5vw;
+   }
+
+   .table_of_contents > ul{
+      font-size: 3vw;
+   }
+
+   @media screen and (max-width: 720px){
+      .table_of_contents{
+         border: 2px solid black;
+         margin-bottom: 15%;
+         width: 80%;
+      }
+
+      .table_of_contents > h1{
+         font-size: 6vw;
+      }
+
+      .table_of_contents > ul{
+         font-size: 4vw;
+      }
+   }
+
+   @media screen and (max-width: 540px){
+   }
+
+ /* INDEX BODY */
+ 
+   #index_body{
+      overflow-y: hidden;
+      width: 100%;
+      align-content: center;
+   }
+
+ 
+
+#index_body > div{
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content:start;
+   align-items: center;
+   /* border: 5px blue solid; */
+   /* padding-top: 10%; */
+}
+
+#play_button{
+   display: flex;
+   flex-direction: column;
+   justify-content: end;
+   text-align: center;
+   width: 100%;
+   font-size: 4vw;
+   padding-bottom: 5%;
+
+}
+
+#index_body > div > div{
+   flex-basis: 50%;
+}
+
+#play_button > p{
+   
+   font-size: 5vw;
+}
+
+#index_page_select > a{
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+  width: 100%;
+  padding-top: 2%;
+
+}
+
+#index_page_select > a:nth-of-type(1)
+{
+   margin-top: 5%;
+}
+
+#index_page_select > a > img{
+   position: absolute;
+   width: 2%;
+   transform: rotateZ(90deg);
+}
+
+#play_button> a > img{
+   height: 4vw;
+}
+
+#index_page_select{
+   display: flex;
+   flex-direction: column;
+   color:wheat;
+   font-size: 2vw;
+   width: 100%;
+   /* border: 2px solid blue; */
+   height: 10%;
+   flex-basis: auto;
+
+   display: flex;
+   justify-content: flex-start;
+
+   background-image: url("../images/placeholder_vinyl.png");
+   background-repeat: no-repeat;
+   background-size: 80%;
+   background-position:top;
+   /* background-position-y: -50%; */
+}
+
+
+.arm_rotate1{
+   transition: all 1s;
+   transform: translateY(-40%) translateX(20%) rotateZ(-85deg);
+}
+
+.arm_rotate2{
+   transition: all 1s;
+   transform: translateY(-40%) translateX(20%) rotateZ(-78deg);
+}
+
+.arm_rotate3{
+   transition: all 1s;
+   transform: translateY(-40%) translateX(20%) rotateZ(-70deg);
+}
+
+.arm_rotate_default{
+   transition: all 1s;
+transform: translateY(-45%) translateX(20%) rotateZ(-90deg);
+   /* transform: translateX(-100%) translateY(-80%); */
+  /* transform: rotateZ(-90deg);
+  width: 50%;
+  float: right; */
+}
+
+#index_page_select > img{
+   transform-origin: top;
+   width: 9%;
+}
+
+ #index_vinyl:hover{
+   cursor: pointer;
+ }
+
+ @media screen and (max-width: 720px){
+   #index_page_select{
+     
+      font-size: 6vw;
+      background-size: 200%;
+      background-position:top;
+      /* background-position-y: -50%; */
+   }
+
+   #index_page_select > a:nth-of-type(1)
+   {
+      margin-top: 15%;
+   }
+
+   #play_button{
+    
+      padding-bottom: 7%;
+   }
+
+   #play_button > p{
+      font-size: 10vw;
+   }
+
+   #play_button > a{
+      font-size: 8vw;
+   }
+
+   #play_button > a >img{
+      height: 6vw;
+   }
+
+   .arm_rotate1{
+      transition: all 1s;
+      transform: translateY(-32%) translateX(-300%) rotateZ(-90deg);
+   }
+   
+   .arm_rotate2{
+      transition: all 1s;
+      transform: translateY(-18%) translateX(-300%) rotateZ(-90deg);
+   }
+   
+   .arm_rotate3{
+      transition: all 1s;
+      transform: translateY(-5%) translateX(-300%) rotateZ(-90deg);
+   }
+   
+   .arm_rotate_default{
+      transition: all 1s;
+   transform: translateY(-60%) translateX(-300%) rotateZ(-90deg);
+
+   
+      /* transform: translateX(-100%) translateY(-80%); */
+     /* transform: rotateZ(-90deg);
+     width: 50%;
+     float: right; */
+   }
+
+   #index_page_select > img{
+      transform-origin: top;
+      width: 20%;
+   }
+ }
+
+ @media screen and (max-width: 540px){
+   #index_page_select{
+     
+      font-size: 6vw;
+
+      background-size: 200%;
+      background-position:top;
+      /* background-position-y: -50%; */
+   }
+
+   #index_page_select > a:nth-of-type(1)
+   {
+      margin-top: 15%;
+   }
+
+   #play_button{
+    
+      padding-bottom: 7%;
+   }
+
+   #play_button > p{
+      font-size: 10vw;
+   }
+
+   #play_button > a{
+      font-size: 8vw;
+   }
+
+   #play_button > a >img{
+      height: 6vw;
+   }
+
+   .arm_rotate1{
+      transition: all 1s;
+      transform: translateY(-32%) translateX(-300%) rotateZ(-90deg);
+   }
+   
+   .arm_rotate2{
+      transition: all 1s;
+      transform: translateY(-18%) translateX(-300%) rotateZ(-90deg);
+   }
+   
+   .arm_rotate3{
+      transition: all 1s;
+      transform: translateY(-5%) translateX(-300%) rotateZ(-90deg);
+   }
+   
+   .arm_rotate_default{
+      transition: all 1s;
+   transform: translateY(-60%) translateX(-300%) rotateZ(-90deg);
+
+   
+      /* transform: translateX(-100%) translateY(-80%); */
+     /* transform: rotateZ(-90deg);
+     width: 50%;
+     float: right; */
+   }
+
+   #index_page_select > img{
+      transform-origin: top;
+      width: 20%;
+   }
+ }
+ /* PAGE 1: WHAT ARE VINYL */
+ /* PAGE 1: WHAT ARE VINYL */
+ /* PAGE 1: WHAT ARE VINYL */
+
+ #pg1_body{
+   height: auto;
+ }
+
+ #pg1_body > div{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding-top: 20vh;
+   flex-wrap: nowrap;   
+ }
+
+ #pg1_body > div > h1 {
+   font-size: 4vw;
+ }
+
+/* Vertical sections are a template layout for each paragraph/ section of each page */
+.vertical_section{
+      display: flex;
+      flex-direction: column;
+      text-align: justify;
+      align-items: center;
+      width: 70%;
+      /* margin-top: 10%;
+      border-top: red 2px solid;
+      border-bottom: blue 2px solid; */
+      height: auto;
+      top: 100%;
+}
+
+.vertical_section > img{
+   width: 60%;
+}
+.vertical_section > p{
+   width: 90%;
+   font-size: 2vw;
+}
+
+.vertical_section > h1{
+   font-size: 4vw;
+}
+
+.vertical_section > h2{
+   font-size: 3.5vw; 
+   border: 2px;
+}
+
+.vertical_section > h3{
+   font-size: 2.5vw;
+}
+
+/* Horizontal sections are a template layout where images are placed horizontally, rather than vertically, but will default to vertical at certain device widths */
+.text_right{
+   text-align:justify;
+   /* border: 2px solid red; */
+}
+
+.text_left{
+   text-align: left;
+}
+.horizontal_section{
+   display: flex;
+   flex-direction: row;
+   text-align: left;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   height: fit-content;
+}
+
+ .horizontal_section > p{
+   font-size: 2vw;
+   width: 50%;
+   padding: 1%;
+}
+
+ .horizontal_section > img{
+   width: 45%;
+   padding: 1%;
+
+}
+ @media screen and (max-width: 720px){
+   .vertical_section{
+      width: 100%;
+   }
+
+   .vertical_section > img{
+      width: 90%;
+   }
+
+   .vertical_section > h1{
+      font-size: 6vw;
+   }
+
+   .vertical_section > h2{
+      font-size: 5vw;
+   }
+
+   .vertical_section > h3{
+      font-size: 4vw;
+   }
+
+   .vertical_section > p{
+      width: 90%;
+      font-size: 3.5vw;
+      text-align: justify;
+   }
+
+   .horizontal_section{
+      flex-direction: column;
+   }
+
+   .horizontal_section > img{
+      width: 90%;
+   }
+
+   .horizontal_section > p{
+      width: 90%;
+      font-size: 3.5vw;
+      text-align: justify;
+
+   }
+ }
+
+ @media screen and (max-width: 540px){
+   .vertical_section{
+      width: 100%;
+   }
+
+   .vertical_section > img{
+      width: 90%;
+   }
+
+   .vertical_section > h1{
+      font-size: 6vw;
+   }
+
+   .vertical_section > h2{
+      font-size: 5vw;
+   }
+
+   .vertical_section > h3{
+      font-size: 4vw;
+   }
+
+   .vertical_section > p{
+      width: 90%;
+      font-size: 4vw;
+      text-align: justify;
+   }
+
+   .horizontal_section{
+      flex-direction: column;
+   }
+
+   .horizontal_section > img{
+      width: 90%;
+   }
+
+   .horizontal_section > p{
+      width: 90%;
+      font-size: 4vw;
+      text-align: justify;
+
+   }
+ }
+
+ #vinyl_display{
+  display: flex; 
+  flex-direction: row;
+   width: 100%;
+   justify-content: center;
+   align-items: center;
+ }
+
+ #vinyl_display > div{
+   display: block;
+ }
+
+ #vinyl_display > div > img{
+   width: 80%;
+ }
+
+ @media screen and (max-width: 720px){
+   #vinyl_display{
+      flex-wrap: wrap;
+     }
+    
+     #vinyl_display > div{
+       flex-basis: 50%;
+       text-align: center;
+
+     }
+  
+ }
+
+ @media screen and (max-width: 540px){
+   #vinyl_display{
+      flex-direction: column;
+     }
+
+
+   
+  
+ }
+
+/* Page 2 how do they work */
+/* Page 2 how do they work */
+/* Page 2 how do they work */
+
+ #pg2_body{
+   height: auto;
+ }
+
+ #pg2_body > div{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding-top: 10%;
+   flex-wrap: nowrap;   
+ }
+
+ #pg2_body > div > h1{
+   margin-top: 10%;
+   font-size: 4vw;
+
+}
+
+#pg2_body > div > h3{
+   font-size: 2.5vw;
+
+}
+
+#gramophone_image{
+   width: 50%;
+}
+
+/* SIMULATOR */
+/* SIMULATOR */
+/* SIMULATOR */
+
+#simulator_body > div {
+   text-align: center;
+   width: 100%;
+   height: 100%;
+
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   overflow-y: hidden;
+}
+
+#simulation_section
+{
+   height: 100%;
+   width: 70%;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: center;
+   padding-top: 5%;
+
+}
+
+#simulator_body > div > div > h1{
+   padding-top: 10%;
+}
+
+#simulator_body > div > div:nth-of-type(2){
+   text-align: center;
+   width: 100%;
+   height: 100%;
+
+   display: flex;
+   flex-direction: row;
+}
+
+/* Platter and arm */
+#simulation_section> div:nth-of-type(1) {
+   height: auto;
+   width: 70%;
+   display: flex;
+   flex-direction: row;
+}
+
+/* Record/ platter */
+#simulation_section> div:nth-of-type(1) >img:nth-of-type(1) {
+   width: 60%;
+   margin-left: 20%;
+   align-self: center;
+}
+
+
+/* Turntable arm */
+#simulation_section> div:nth-of-type(1) >img:nth-of-type(2) {
+   object-fit: contain;
+   width: 11%;
+   height: fit-content;
+   transform-origin: top;
+   transition: all   0.1s;
+}
+
+/* Control panel */
+#simulation_section> div:nth-of-type(2) {
+   display: flex;
+   flex-direction: row;
+   width: 80%;
+   height: 10%;
+   justify-content:space-evenly;
+   border: 2px solid black;
+}
+
+#simulation_section> div>div {
+   width: 33%;
+   height: 100%;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+}
+
+#simulation_section> div>div:nth-of-type(1) {
+   flex-direction: column;
+   justify-content: flex-start;
+}
+
+#simulation_section> div>div:nth-of-type(1)>p {
+   padding: 0;
+   margin: 0;
+   font-size: 1vw;
+}
+
+#speed{
+   background-color: white;
+}
+
+/* Audio Technica */
+#simulation_section> div>div>img {
+   height: 100%;  
+}
+
+/* Control panel buttons */
+#simulation_section> div > div> button{
+   margin-top: 2%;
+   height: 30%;
+   font-size: 1vw;
+   font-weight: 900;
+}
+
+/* Scroll/ Carousel */
+.scroll{
+   display: flex;
+   flex-grow: 0;
+   flex-shrink:0 ;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: center;
+   width: 35%;
+   height: 35%;
+   padding-top:5% ;
+
+ }
+
+ .scroll > div{
+   width: 100%;
+   height: 30vh;
+   display: flex;
+   flex-direction: column;
+   flex-grow: 0;
+   flex-shrink:0 ;
+   justify-content: center;
+   
+ }
+ 
+.scroll > button{
+   height: 10%;
+   width: 50%;
+}
+
+.scroll > button > img{
+   height: 100%;
+}
+
+.scroll > button:nth-child(1) > img{
+   transform: rotateZ(180deg);
+}
+
+.scrollItem{
+   
+   display: flex;
+   flex-direction: row;
+   width: 15vw;
+   height:15vw;
+   position:absolute;
+   transition: opacity 1s;
+
+}
+
+.scroll > div > div > img{
+   width: 100%;
+}
+
+/* Hide records behind album */
+.record {
+   
+   z-index: -1;
+   height: 100%;
+   width: auto;
+   transform: translateX(-100%);
+   transition: all 1s;
+
+}
+
+.album{
+   transform: translateZ(1000px);
+   z-index: 1;
+}
+
+.scrollItem > div{
+   z-index: -1;
+
+   position: relative;
+   transform: translateX(-14vw);
+   width:100%;
+   text-align: left;
+   opacity: 0%;
+   transition: opacity 1s;
+
+}
+
+.scrollItem > div > p{
+   width: 100%;
+   white-space: nowrap;
+   font-size: 2vw;
+} 
+
+.scrollActive{
+   transition: transform 1s;
+}
+
+.scrollActive > div{
+   opacity: 100%;
+   transition: all 1s;
+}
+
+.scrollUp
+{
+   z-index: -1;
+   opacity: 75%;
+   transform:translateX(-2.5%) scale(0.8) translateY(-30%);
+   transition: transform 1s;
+}
+
+.scrollDown
+{
+   z-index: -1;
+   opacity: 75%;
+   transform:translateX(-2.5%) scale(0.8) translateY(30%);
+   transition: transform 1s;
+
+}
+
+.revealVinyl{
+   z-index: 0;
+   transform: translateX(0) rotateZ(90deg); 
+}
+
+@media screen and (max-width: 720px){
+   #simulator_body > div > div:nth-of-type(2){
+     
+      flex-direction: column;
+      align-items: flex-start;
+   }
+
+   #simulation_section{
+      width: 100%;
+      height: 40%;
+   }
+
+   #simulator_body > div > div > h1{
+      padding-top: 15%;
+   }
+
+   #simulation_section> div:nth-of-type(2) {
+ 
+      width: 90%;
+      height: 20%;
+   }
+
+   #simulation_section> div > div> button{
+      margin-top: 2%;
+      height: 40%;
+      font-size: 2.2vw;
+   }
+
+   .scroll > button{
+      height: 5vh;
+
+   }
+
+   .scroll{
+      padding-bottom: 1000%;
+      height: 20vh;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: start;
+      width: 30%;
+      padding-left: 30%;
+   }
+
+   #simulator_body{
+      
+      padding-bottom: 10%;
+   }
+
+   #simulation_section> div>div:nth-of-type(1)>p {
+
+      font-size: 2vw;
+   }
+
+   .scrollItem{
+      width: 25vw;
+      height:25vw;
+   }
+}
+
+@media screen and (max-width: 540px){
+   .scroll{
+      padding-left: 20%;
+
+   }
+
+   .scrollItem{
+      width: 30vw;
+      height:30vw;
+   }
+}
