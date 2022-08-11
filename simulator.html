@@ -1,33 +1,40 @@
 <!DOCTYPE html>
 
 <head>
-    <meta name="viewport" content="width=device-width", initial-scale="1">
+    <meta name="viewport" content="width=device-width" initial-scale="1">
     
     <style>
         @import url("css/style.css");
     </style>
-    <script src="js/RENAME.js" defer></script>
+    <script src="js/script.js" defer></script>
 
     <title>Vinyl Simulator</title>
 </head>
 
 <body id="simulator_body">
+    <!-- Navigation -->
     <nav>
+        <!-- Navigation top -->
+        <!-- Div for website logo, and also hamburger button for when device is phone or tablet -->
         <div class="nav_top">
+            <!-- Logo -->
             <a class="logo" href="index.html">
-                <img src="images/placeholder_logo.png">
+                <img src="images/logo.png" alt="vinyl record logo">
             </a>
-            <a class="hamburger">
-                <img src="images/hamburger.png">
-            </a>        
+            <!-- Hamburger -->
+            <button class="hamburger">
+                <img src="images/hamburger.png" alt="hamburger icon">
+            </button  >        
         </div>
+        <!-- Navigation bottom -->
+        <!-- Div for all page options, and button for dropdown menu -->
         <div class="nav_bottom">
-            <!-- <anchor>HOME</anchor> -->
-           <a href="what_are_vinyl.html"> <img src="images/placeholder_vinyl.png">What are vinyl records?</a>
-            <a href="how_do_vinyls_work.html"> <img src="images/placeholder_vinyl.png">How do they work?</a>
-           <a href="simulator.html"> <img src="images/placeholder_vinyl.png">Record Player Simulator</a>
-
-            <button><img src="images/down.png"></button>
+            <!-- Navigation options -->
+           <a href="what_are_vinyl.html"> <img src="images/placeholder_vinyl.png" alt="vinyl record icon">What are vinyl records?</a>
+            <a href="how_do_vinyls_work.html"> <img src="images/placeholder_vinyl.png" alt="vinyl record icon">How do they work?</a>
+           <a href="simulator.html"> <img src="images/placeholder_vinyl.png" alt="vinyl record icon">Record Player Simulator</a>
+            <!-- Dropdown menu button -->
+            <button><img src="images/down.png" alt="down icon"></button>
         </div>
       
     </nav>
@@ -39,22 +46,28 @@
             <p>(Note: not all turntables have the same functionalities as this one. Some may have a fixed speed, or the arm may need to be manually lifted)</p>
         </div>
         <div>
+            <!-- Section for record player simulation -->
             <div id="simulation_section">
             
                 <div>
-                    <img src="images/turntable_platter.png" id="platter">
-                    <img src="images/turntable_arm.png" id="arm">
+                    <!-- Turntable platter -->
+                    <img src="images/turntable_platter.png" id="platter" alt="image of turntable platter">
+                    <!-- Turntable arm -->
+                    <img src="images/turntable_arm.png" id="arm" alt="image of turntable arm">
                 </div>
+                <!-- Control panel -->
                 <div>
-
+                    <!-- Speed button -->
                     <div> 
-                    <button id="speed">SPEED</button>
-                    <p>White: 33RPM</p>
-                    <p>Gray: 45RPM</p>
+                        <button id="speed">SPEED</button>
+                        <p>White: 33RPM</p>
+                        <p>Gray: 45RPM</p>
                     </div>
+                    <!-- Audio Technica logo -->
                     <div>
-                        <img src="images/at_logo.png">
+                        <img src="images/at_logo.png" alt="Audio Technica logo">
                     </div>
+                    <!-- Start, stop, and arm control buttons -->
                     <div>
                         <button id="start">START</button>
                         <button id="stop">STOP</button>
@@ -62,13 +75,18 @@
                     </div>
                 </div>
             </div>
+            <!-- Section for scrolling/ browsing albums -->
             <div class="scroll">
-                <button class="scrollButtonUp"><img src="images/down.png"></button>
+                <!-- Button used for navigating the record scroll -->
+                <button class="scrollButtonUp"><img src="images/down.png" alt="down icon"></button>
                 <div>
                     <div class="scrollItem scrollUp">
-                        <img src="images/album1.jpg" class="album" >
-                        <img src="images/placeholder_vinyl.png" class="record">
+                        <!-- Album cover -->
+                        <img src="images/album1.jpg" class="album" alt="album art">
+                        <!-- Vinyl record -->
+                        <img src="images/placeholder_vinyl.png" class="record" alt="image of vinyl record">
                         <div>
+                            <!-- Song information -->
                             <p>Song: Hotel</p>
                             <p>RPM: 33 1/3</p>
                             <p>Size: 12"</p>
@@ -76,8 +94,8 @@
                         
                     </div>
                     <div  class="scrollItem scrollActive">
-                        <img src="images/album2.jpg" class="album">
-                        <img src="images/placeholder_vinyl.png" class="record">
+                        <img src="images/album2.jpg" class="album" alt="album art">
+                        <img src="images/placeholder_vinyl.png" class="record" alt="image of vinyl record">
                         <div>
                             <p>Song: Snow</p>
                             <p>RPM: 33 1/3</p>
@@ -85,8 +103,8 @@
                         </div>
                     </div>
                     <div class="scrollItem scrollDown">
-                        <img src="images/album3.jpg" class="album">
-                        <img src="images/placeholder_vinyl.png" class="record">
+                        <img src="images/album3.jpg" class="album" alt="album art">
+                        <img src="images/placeholder_vinyl.png" class="record" alt="image of vinyl record">
                         <div>
                             <p>Song: Medium</p>
                             <p>RPM: 45</p>
@@ -94,9 +112,11 @@
                         </div>
                     </div>
                 </div>
-                <button class="scrollButtonDown"><img src="images/down.png"></button>
+                <!-- Button used for navigating the record scroll -->
+                <button class="scrollButtonDown"><img src="images/down.png" alt="down icon"></button>
             </div>
         </div>
+        <!-- Audio element. Hidden -->
         <audio id="audio" src="audio/Hotel.mp3">
             
         </audio>

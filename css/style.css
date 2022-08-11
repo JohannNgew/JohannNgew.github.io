@@ -20,20 +20,27 @@ body{
 
 div{
    height: 100%;
-   
 }
 
+img:not(#platter):not(.album):not(.record):not(#index_arm):hover{
+   transition: all 1s;
+   transform: scale(1.1);
+}
+
+img:not(#platter):not(.album):not(.record):not(.nav_bottom>a>img){
+   transition: all 1s;
+}
+
+/* NAVIGATION BAR */
+/* NAVIGATION BAR */
 /* NAVIGATION BAR */
 
 .nav_hide{
    transition: all 0.5s;
-
    transform: translateY(-100%);
-   /* display: none; */
 }
 
 .nav_translate{
-   /* transform: translateY(-75%); */
    transition: all 1s;
 
    transform: translateY(-75%);
@@ -45,13 +52,10 @@ div{
    height: 37.5%;
 }
 
-
-
 /* Desktop */
 nav{
    height: 10%;
    width: 100%;
-   /* border: solid 2px cyan; */
    display: flex;
    flex-direction: row;
    position: fixed;
@@ -61,12 +65,9 @@ nav{
    z-index: 2;
 }
 
-
-
 .nav_top{
    background-color: white;
    z-index: 2;
-   /* width: 20%; */
    flex-basis: 10%;
    width: 100%;
    display: flex;
@@ -77,8 +78,6 @@ nav{
 .logo>img{
    height: 100%;
 }
-
-
 
 .nav_bottom{
    flex-basis: 90%;
@@ -107,7 +106,6 @@ nav{
 
    text-decoration: none;
 }
-
 
 .nav_bottom > a >img{
    height: 50%;
@@ -179,19 +177,16 @@ a:visited{
    }
 
    .logo {
-      /* border: 2px solid red; */
       width: 10%;
    }
 
    .logo > img{
       width: 100%;
       height: auto;
-      /* border: 2px solid chartreuse; */
 
    }
 
    .nav_bottom{
-      /* border: 2px solid chartreuse; */
       height: auto;
       flex-direction: column;
       width: 100%;
@@ -229,29 +224,6 @@ a:visited{
       width: 15vw;
    }
 
-
-
-   /* .nav_bottom > a{} */
-
-   /* nav > div{
-      width: 100%;
-      border: 2px solid rgb(255, 0, 140);
-      align-items: center;
-      justify-content: center;
-      align-content: center;
-   }
-
-   nav>div>img{
-      width: 20%;
-      height: auto;
-      border: 2px solid green;
-
-   }
-
-   .nav_bottom{
-      display: flex;
-      flex-direction: column;
-   } */
 }
 
 /* Phone */
@@ -284,6 +256,8 @@ a:visited{
 }  
 
 /* table of contents */
+/* table of contents */
+/* table of contents */
    .table_of_contents{
       border: 1px solid black;
       margin-bottom: 15%;
@@ -299,6 +273,7 @@ a:visited{
       font-size: 3vw;
    }
 
+   /* Tablet */
    @media screen and (max-width: 720px){
       .table_of_contents{
          border: 2px solid black;
@@ -315,18 +290,19 @@ a:visited{
       }
    }
 
+   /* Phone */
    @media screen and (max-width: 540px){
    }
 
  /* INDEX BODY */
- 
-   #index_body{
-      overflow-y: hidden;
-      width: 100%;
-      align-content: center;
-   }
+ /* INDEX BODY */
+ /* INDEX BODY */
 
- 
+#index_body{
+   overflow-y: hidden;
+   width: 100%;
+   align-content: center;
+}
 
 #index_body > div{
    height: 100%;
@@ -334,8 +310,6 @@ a:visited{
    flex-direction: column;
    justify-content:start;
    align-items: center;
-   /* border: 5px blue solid; */
-   /* padding-top: 10%; */
 }
 
 #play_button{
@@ -346,7 +320,6 @@ a:visited{
    width: 100%;
    font-size: 4vw;
    padding-bottom: 5%;
-
 }
 
 #index_body > div > div{
@@ -354,7 +327,6 @@ a:visited{
 }
 
 #play_button > p{
-   
    font-size: 5vw;
 }
 
@@ -364,11 +336,10 @@ a:visited{
   z-index: 1;
   width: 100%;
   padding-top: 2%;
-
+  cursor: pointer;
 }
 
-#index_page_select > a:nth-of-type(1)
-{
+#index_page_select > a:nth-of-type(1){
    margin-top: 5%;
 }
 
@@ -388,7 +359,6 @@ a:visited{
    color:wheat;
    font-size: 2vw;
    width: 100%;
-   /* border: 2px solid blue; */
    height: 10%;
    flex-basis: auto;
 
@@ -399,9 +369,7 @@ a:visited{
    background-repeat: no-repeat;
    background-size: 80%;
    background-position:top;
-   /* background-position-y: -50%; */
 }
-
 
 .arm_rotate1{
    transition: all 1s;
@@ -421,10 +389,6 @@ a:visited{
 .arm_rotate_default{
    transition: all 1s;
 transform: translateY(-45%) translateX(20%) rotateZ(-90deg);
-   /* transform: translateX(-100%) translateY(-80%); */
-  /* transform: rotateZ(-90deg);
-  width: 50%;
-  float: right; */
 }
 
 #index_page_select > img{
@@ -436,22 +400,20 @@ transform: translateY(-45%) translateX(20%) rotateZ(-90deg);
    cursor: pointer;
  }
 
+ /* Tablet */
  @media screen and (max-width: 720px){
    #index_page_select{
      
       font-size: 6vw;
       background-size: 200%;
       background-position:top;
-      /* background-position-y: -50%; */
    }
 
-   #index_page_select > a:nth-of-type(1)
-   {
+   #index_page_select > a:nth-of-type(1){
       margin-top: 15%;
    }
 
    #play_button{
-    
       padding-bottom: 7%;
    }
 
@@ -484,13 +446,7 @@ transform: translateY(-45%) translateX(20%) rotateZ(-90deg);
    
    .arm_rotate_default{
       transition: all 1s;
-   transform: translateY(-60%) translateX(-300%) rotateZ(-90deg);
-
-   
-      /* transform: translateX(-100%) translateY(-80%); */
-     /* transform: rotateZ(-90deg);
-     width: 50%;
-     float: right; */
+      transform: translateY(-60%) translateX(-300%) rotateZ(-90deg);
    }
 
    #index_page_select > img{
@@ -499,23 +455,19 @@ transform: translateY(-45%) translateX(20%) rotateZ(-90deg);
    }
  }
 
+ /* Phone */
  @media screen and (max-width: 540px){
    #index_page_select{
-     
       font-size: 6vw;
-
       background-size: 200%;
       background-position:top;
-      /* background-position-y: -50%; */
    }
 
-   #index_page_select > a:nth-of-type(1)
-   {
+   #index_page_select > a:nth-of-type(1){
       margin-top: 15%;
    }
 
    #play_button{
-    
       padding-bottom: 7%;
    }
 
@@ -548,13 +500,7 @@ transform: translateY(-45%) translateX(20%) rotateZ(-90deg);
    
    .arm_rotate_default{
       transition: all 1s;
-   transform: translateY(-60%) translateX(-300%) rotateZ(-90deg);
-
-   
-      /* transform: translateX(-100%) translateY(-80%); */
-     /* transform: rotateZ(-90deg);
-     width: 50%;
-     float: right; */
+      transform: translateY(-60%) translateX(-300%) rotateZ(-90deg);
    }
 
    #index_page_select > img{
@@ -562,6 +508,7 @@ transform: translateY(-45%) translateX(20%) rotateZ(-90deg);
       width: 20%;
    }
  }
+
  /* PAGE 1: WHAT ARE VINYL */
  /* PAGE 1: WHAT ARE VINYL */
  /* PAGE 1: WHAT ARE VINYL */
@@ -589,9 +536,6 @@ transform: translateY(-45%) translateX(20%) rotateZ(-90deg);
       text-align: justify;
       align-items: center;
       width: 70%;
-      /* margin-top: 10%;
-      border-top: red 2px solid;
-      border-bottom: blue 2px solid; */
       height: auto;
       top: 100%;
 }
@@ -620,12 +564,12 @@ transform: translateY(-45%) translateX(20%) rotateZ(-90deg);
 /* Horizontal sections are a template layout where images are placed horizontally, rather than vertically, but will default to vertical at certain device widths */
 .text_right{
    text-align:justify;
-   /* border: 2px solid red; */
 }
 
 .text_left{
    text-align: left;
 }
+
 .horizontal_section{
    display: flex;
    flex-direction: row;
@@ -638,15 +582,16 @@ transform: translateY(-45%) translateX(20%) rotateZ(-90deg);
 
  .horizontal_section > p{
    font-size: 2vw;
-   width: 50%;
+   width: 40%;
    padding: 1%;
 }
 
  .horizontal_section > img{
    width: 45%;
    padding: 1%;
-
 }
+
+/* Tablet */
  @media screen and (max-width: 720px){
    .vertical_section{
       width: 100%;
@@ -686,10 +631,11 @@ transform: translateY(-45%) translateX(20%) rotateZ(-90deg);
       width: 90%;
       font-size: 3.5vw;
       text-align: justify;
-
    }
+
  }
 
+ /* Phone */
  @media screen and (max-width: 540px){
    .vertical_section{
       width: 100%;
@@ -729,13 +675,12 @@ transform: translateY(-45%) translateX(20%) rotateZ(-90deg);
       width: 90%;
       font-size: 4vw;
       text-align: justify;
-
    }
  }
 
  #vinyl_display{
-  display: flex; 
-  flex-direction: row;
+   display: flex; 
+   flex-direction: row;
    width: 100%;
    justify-content: center;
    align-items: center;
@@ -749,6 +694,7 @@ transform: translateY(-45%) translateX(20%) rotateZ(-90deg);
    width: 80%;
  }
 
+ /* Tablet */
  @media screen and (max-width: 720px){
    #vinyl_display{
       flex-wrap: wrap;
@@ -757,19 +703,14 @@ transform: translateY(-45%) translateX(20%) rotateZ(-90deg);
      #vinyl_display > div{
        flex-basis: 50%;
        text-align: center;
-
      }
-  
  }
 
+ /* Phone */
  @media screen and (max-width: 540px){
    #vinyl_display{
       flex-direction: column;
-     }
-
-
-   
-  
+   }
  }
 
 /* Page 2 how do they work */
@@ -796,7 +737,6 @@ transform: translateY(-45%) translateX(20%) rotateZ(-90deg);
 
 #pg2_body > div > h3{
    font-size: 2.5vw;
-
 }
 
 #gramophone_image{
@@ -811,34 +751,39 @@ transform: translateY(-45%) translateX(20%) rotateZ(-90deg);
    text-align: center;
    width: 100%;
    height: 100%;
-
    display: flex;
    flex-direction: column;
    align-items: center;
    overflow-y: hidden;
 }
 
-#simulation_section
-{
+#simulation_section{
    height: 100%;
    width: 70%;
    display: flex;
    flex-direction: column;
-   justify-content: flex-start;
+   justify-content:start;
    align-items: center;
-   padding-top: 5%;
-
+   padding-top: 1%;
 }
 
 #simulator_body > div > div > h1{
-   padding-top: 10%;
+   padding-top: 15%;
+   font-size: 2vw;
+   margin-bottom: 0.5%;
+}
+
+#simulator_body > div > div > p{
+   font-size: 1vw;
+   padding: 0%;
+   margin: 0;
+   width: 95%;
 }
 
 #simulator_body > div > div:nth-of-type(2){
    text-align: center;
    width: 100%;
    height: 100%;
-
    display: flex;
    flex-direction: row;
 }
@@ -857,7 +802,6 @@ transform: translateY(-45%) translateX(20%) rotateZ(-90deg);
    margin-left: 20%;
    align-self: center;
 }
-
 
 /* Turntable arm */
 #simulation_section> div:nth-of-type(1) >img:nth-of-type(2) {
@@ -925,7 +869,6 @@ transform: translateY(-45%) translateX(20%) rotateZ(-90deg);
    width: 35%;
    height: 35%;
    padding-top:5% ;
-
  }
 
  .scroll > div{
@@ -936,7 +879,6 @@ transform: translateY(-45%) translateX(20%) rotateZ(-90deg);
    flex-grow: 0;
    flex-shrink:0 ;
    justify-content: center;
-   
  }
  
 .scroll > button{
@@ -953,14 +895,12 @@ transform: translateY(-45%) translateX(20%) rotateZ(-90deg);
 }
 
 .scrollItem{
-   
    display: flex;
    flex-direction: row;
    width: 15vw;
    height:15vw;
    position:absolute;
    transition: opacity 1s;
-
 }
 
 .scroll > div > div > img{
@@ -969,13 +909,11 @@ transform: translateY(-45%) translateX(20%) rotateZ(-90deg);
 
 /* Hide records behind album */
 .record {
-   
    z-index: -1;
    height: 100%;
    width: auto;
    transform: translateX(-100%);
    transition: all 1s;
-
 }
 
 .album{
@@ -985,14 +923,12 @@ transform: translateY(-45%) translateX(20%) rotateZ(-90deg);
 
 .scrollItem > div{
    z-index: -1;
-
    position: relative;
    transform: translateX(-14vw);
    width:100%;
    text-align: left;
    opacity: 0%;
    transition: opacity 1s;
-
 }
 
 .scrollItem > div > p{
@@ -1010,21 +946,18 @@ transform: translateY(-45%) translateX(20%) rotateZ(-90deg);
    transition: all 1s;
 }
 
-.scrollUp
-{
+.scrollUp{
    z-index: -1;
    opacity: 75%;
    transform:translateX(-2.5%) scale(0.8) translateY(-30%);
    transition: transform 1s;
 }
 
-.scrollDown
-{
+.scrollDown{
    z-index: -1;
    opacity: 75%;
    transform:translateX(-2.5%) scale(0.8) translateY(30%);
    transition: transform 1s;
-
 }
 
 .revealVinyl{
@@ -1032,6 +965,7 @@ transform: translateY(-45%) translateX(20%) rotateZ(-90deg);
    transform: translateX(0) rotateZ(90deg); 
 }
 
+/* Tablet */
 @media screen and (max-width: 720px){
    #simulator_body > div > div:nth-of-type(2){
      
@@ -1045,7 +979,12 @@ transform: translateY(-45%) translateX(20%) rotateZ(-90deg);
    }
 
    #simulator_body > div > div > h1{
-      padding-top: 15%;
+      font-size: 4vw;
+      padding-top: 25%;
+   }
+
+   #simulator_body > div > div > p{
+      font-size: 2.5vw;
    }
 
    #simulation_section> div:nth-of-type(2) {
@@ -1091,6 +1030,7 @@ transform: translateY(-45%) translateX(20%) rotateZ(-90deg);
    }
 }
 
+/* Phone */
 @media screen and (max-width: 540px){
    .scroll{
       padding-left: 20%;
@@ -1100,5 +1040,13 @@ transform: translateY(-45%) translateX(20%) rotateZ(-90deg);
    .scrollItem{
       width: 30vw;
       height:30vw;
+   }
+
+   #simulator_body > div > div > h1{
+      font-size: 5vw;
+   }
+
+   #simulator_body > div > div > p{
+      font-size: 3vw;
    }
 }

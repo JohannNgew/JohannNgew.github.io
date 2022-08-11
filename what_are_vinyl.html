@@ -1,41 +1,52 @@
 <!DOCTYPE html>
 
 <head>
-<meta name="viewport" content="width=device-width", initial-scale="1">
+<meta name="viewport" content="width=device-width" initial-scale="1">
 
 <style>
     @import url("css/style.css");
 </style>
-<script src="js/RENAME.js" defer></script>
+<script src="js/script.js" defer></script>
 
 <title>Page 1: What are vinyl?</title>
 </head>
 
 <body id="pg1_body">
-    <nav>
+      <!-- Navigation -->
+      <nav>
+        <!-- Navigation top -->
+        <!-- Div for website logo, and also hamburger button for when device is phone or tablet -->
         <div class="nav_top">
+            <!-- Logo -->
             <a class="logo" href="index.html">
-                <img src="images/placeholder_logo.png">
+                <img src="images/logo.png" alt="vinyl record logo">
             </a>
-            <a class="hamburger">
-                <img src="images/hamburger.png">
-            </a>
+            <!-- Hamburger -->
+            <button class="hamburger">
+                <img src="images/hamburger.png" alt="hamburger icon">
+            </button  >        
         </div>
+        <!-- Navigation bottom -->
+        <!-- Div for all page options, and button for dropdown menu -->
         <div class="nav_bottom">
-            <!-- <anchor>HOME</anchor> -->
-           <a href="what_are_vinyl.html"> <img src="images/placeholder_vinyl.png">What are vinyl records?</a>
-            <a href="how_do_vinyls_work.html"> <img src="images/placeholder_vinyl.png">How do they work?</a>
-           <a href="simulator.html"> <img src="images/placeholder_vinyl.png">Record Player Simulator</a>
-
-            <button><img src="images/down.png"></button>
+            <!-- Navigation options -->
+           <a href="what_are_vinyl.html"> <img src="images/placeholder_vinyl.png" alt="vinyl record icon">What are vinyl records?</a>
+            <a href="how_do_vinyls_work.html"> <img src="images/placeholder_vinyl.png" alt="vinyl record icon">How do they work?</a>
+           <a href="simulator.html"> <img src="images/placeholder_vinyl.png" alt="vinyl record icon">Record Player Simulator</a>
+            <!-- Dropdown menu button -->
+            <button><img src="images/down.png" alt="down icon"></button>
         </div>
       
     </nav>
+
+    <!-- Button for bringing the user to the top of the page -->
     <div class="top_button">
-        <a href="what_are_vinyl.html#pg1_body"><img src="images/top.jpg"></a>
+        <a href="what_are_vinyl.html#pg1_body"><img src="images/top.jpg" alt="top icon"></a>
      </div>
+     
     <div>
         <h1>What are vinyl records?</h1>  
+        <!-- Table of contents -->
         <div class="table_of_contents" id="pg1_top">
             <h1>Table of contents</h1>
             <ul>
@@ -51,9 +62,10 @@
 
         </div>
 
+        <!-- Introduction -->
         <div class="vertical_section" id="introduction">
             <h1>Introduction</h1>
-            <img src="images/vinyl.gif">
+            <img src="images/vinyl.gif" alt="gif of cartoon record being played">
             <p>Vinyl records have actually been around for more than a century. What we know now as a record player, was first known as a phonograph when it 
                 was invented in 1877. It eventaully came to be known as a gramophone after 1887, and later as a record player since the 1940s. In more recent times however,
                 they have been referred to as turntables.
@@ -62,10 +74,10 @@
        
 
     
-
+            <!-- Formats -->
             <div class="vertical_section">
                 <h1 id="formats">Different formats of vinyl</h1>
-                <img src ="images/formats.jpg">
+                <img src ="images/formats.jpg" alt="image  showcasing many sizes of vinyl">
                 <p class="text_left">
                     Vinyl records have come in a large variety of different sizes, but there are 3 standardised sizes. Each size is played at different speeds, or rotations per minute (RPM). The first vinyl record player, the gramophone, utilised a 7 inch wide record,
                     and had to be spun <i>manually</i> with a hand crank at 70 RPM. Over the next few years, the medium found itself in different formats, as sizes, materials and RPMs changed until 1930. That year,
@@ -73,73 +85,89 @@
                 </p>
                 
             </div>
+
+            <!-- Speeds -->
             <div class="vertical_section" id="speeds">
                 <h2>Speeds</h2>
                 <div class="horizontal_section">
                     <p class="text_right">Vinyls nowadays come in 3 different standard <b>R</b>evolutions <b>P</b>er <b>M</b>inute speeds. 78, 45 and 33 1/3 RPMs. There are also niche speeds like 16RPM.
                         Modern turntables typically can only choose between 33 1/3 and 45 RPM speeds
                     </p>
-                    <img src="images/speed.jpg">
+                    <img src="images/speed.jpg" alt="image showing the speed switch on a record player">
                 </div>
                
+                <!-- 78 -->
                 <h3>78</h3>
-                
-                
                 <p>78RPM became the standard by 1925, but was phased out by the 1950s, due to the standards low storage capacity. Because of this, 78s are relatively rare. 
                     A 12 inch 78 RPM record could only hold 4 to 5 minutes 
                     of audio, due to the high speed at which the needle has to travel. So despite having the highest RPM, and thus potential audio quality, 78s were phased out.
                     Modern record players cannot play 78RPM records, as they require a wider, 3mm needle, as compared to the typical 1mm.
                 </p>
+
+                <!-- 33 1/3 -->
                 <h3>33 1/3</h3>
                 <p>
                     33 1/3RPM was the next standard to come about. It made little impact on release to the comercial industry, as it was mainly used 
                     by radio stations. However, it rose in popularity in the 1950s. Today, you're most likely to come across records that use this standard
                 </p>
+
+                <!-- 45 -->
                 <h3>45</h3>
-    
                 <p>
                     Lastly, there is the 45 RPM standard. The format is most common in single releases. It held little advantage over the 78 format. But, because 45s came typically came as 7 inch records, manufacturers focused on 
                     33 1/3, and 45 RPM standards, thus phasing out 78s
                 </p>
             </div>
-    
+            
+            <!-- Sizes -->
             <div class="vertical_section" id="sizes">
                 <h2>Sizes and formats</h2>
                 <p>Vinyls typically come in 12", 10" and 7" formats today, though there are a number of rare and niche sizes</p>
                 <p>     12 Inch LP (Long Play) records are the most common format today for whole albums. They are typically played at 33 1/3 RPM, and can store up to 26 minutes of audio
                     on boths sides of the disc. Although, some are played at 45RPM.
                 </p>
-                <img src="images/3vinyl.webp">
-    
+                <img src="images/3vinyl.webp" alt="image showing 3 different vinyls across the 3 standard sizes">
+                
+                <!-- 12" formats -->
                 <p>
                     There is also the 12 inch single format. Similar to the previous format, this disc is also played at 33 1/3
                     to 45 RPM. Typically, each side of the disc is used to store only one track, thus why it is known as a 'singles' format. So what's the differene then? Unlike the LP
                     format, singles sacrifice playtime by having wider grooves. This results in louder levels to be engraved onto the disc, resulting in a wider dynamic range and thus
                     higher quality audio. These discs are typically used by DJs and collectors. 
                 </p>
+
+                <!-- 7" 10" formats -->
                 <p>
                     Next, there are the 7" and 10" single formats. As the name suggest, they are used to store sigle tracks on each side.
                     They are typically played at 45RPM, and the 7" records were commonly used in jukebox machines, though 10" records were also occasionalyl used.
                 </p>
+
+                <!-- EP -->
                 <p>
                     There are also EP (Extended Play) records. EPs come in 7" and 12" sizes, and were designed to be played at 33 1/3 and 45 RPM speeds. They are a cross between
                     LPs and Singles, in that they sacrifice space for wider grooves in return for higher audio quality, but also store more than 1 track on either side of the disc.
                 </p>
-                <p>Fun fact: the terms LP, EP, and single were first coined to describe different vinyl formats, but are now the music industry standard of referring to different types of releases</p>
-            </p>
+
+                <!-- Fun fact -->
+                <p>Fun fact: the terms LP, EP, and single were first coined to describe different vinyl formats, but are now the music industry standard of referring to different types of releases
+
+                </p>
             
             </div>
+
+            <!-- Styles -->
             <div class="vertical_section">
                 <h2>Styles of vinyl</h2>
                 <p>Lastly, I would like to briefly mention the different styles of vinyl that are available. Since vinyls are made by pressing grooves into a vinyl material, 
                     different colors and styles can be easily made by swapping out the vinyl material.
                 </p>
+                 <!-- Gallery of images inclluding descriptions covering different colors, splash patterns and also images -->
+
                 <div id="vinyl_display">
-                    <div><img src="images/colored_vinyl.jpg"><p>Some vinyls are printed in different colors</p></div>
-                    <div><img src="images/picture_disc_vinyl.jpg"><p>Others are pressed onto printed designs</p></div>
-                    <div><img src="images/splatter_vinyl.webp"><p>Some even come in splatter designs</p></div>
+                    <div><img src="images/colored_vinyl.jpg" alt="image showing a pink vinyl single"><p>Some vinyls are printed in different colors</p></div>
+                    <div><img src="images/picture_disc_vinyl.jpg" alt="image showing the cover art for 'Queen II' printed onto a vinyl"><p>Others are pressed onto printed designs</p></div>
+                    <div><img src="images/splatter_vinyl.webp" alt="image showing a radioactive green splatter patterned vinyl"><p>Some even come in splatter designs</p></div>
                 </div>
-                <!-- Gallery of images inclluding descriptions covering different colors, splash patterns and also images -->
             </div>
     </div>
 
